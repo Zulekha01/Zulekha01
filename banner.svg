@@ -1,5 +1,6 @@
 <svg width="100%" height="220" viewBox="0 0 900 220"
-     xmlns="http://www.w3.org/2000/svg">
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
 
   <!-- Background -->
   <defs>
@@ -7,42 +8,68 @@
       <stop offset="0%" stop-color="#4b6cb7"/>
       <stop offset="100%" stop-color="#182848"/>
     </linearGradient>
+
+    <style>
+      .typing {
+        animation: typing 3s steps(30, end) infinite;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .typing2 {
+        animation: typing2 3s steps(15, end) infinite;
+        animation-delay: 3s;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      @keyframes typing {
+        0% { width: 0 }
+        40% { width: 520px }
+        100% { width: 520px }
+      }
+
+      @keyframes typing2 {
+        0% { width: 0 }
+        40% { width: 200px }
+        100% { width: 200px }
+      }
+
+      .float {
+        animation: float 1.8s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+        100% { transform: translateY(0); }
+      }
+    </style>
   </defs>
 
   <rect width="900" height="220" rx="20" fill="url(#bg)" />
 
-  <!-- Animated Text -->
-  <text x="40" y="100"
-        font-size="38"
-        fill="white"
-        font-family="Poppins, Arial">
-    Hey! I am Zulekha Aalmi
-    <animate attributeName="opacity"
-             from="0" to="1"
-             dur="1.5s" fill="freeze"/>
-  </text>
+  <!-- Name -->
+  <foreignObject x="40" y="70" width="600" height="60">
+    <div xmlns="http://www.w3.org/1999/xhtml"
+         style="color:white;font-size:36px;font-family:Poppins,Arial;"
+         class="typing">
+      Hey! I am Zulekha Aalmi
+    </div>
+  </foreignObject>
 
-  <text x="40" y="145"
-        font-size="20"
-        fill="#e0e7ff"
-        font-family="Poppins, Arial">
-    Web Developer
-    <animate attributeName="x"
-             from="-200" to="40"
-             dur="1.2s" fill="freeze"/>
-  </text>
+  <!-- Role -->
+  <foreignObject x="40" y="125" width="300" height="40">
+    <div xmlns="http://www.w3.org/1999/xhtml"
+         style="color:#e0e7ff;font-size:20px;font-family:Poppins,Arial;"
+         class="typing2">
+      Web Developer
+    </div>
+  </foreignObject>
 
-  <!-- Floating Emoji -->
-  <text x="780" y="110" font-size="48">
-    🎧
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      from="0 0"
-      to="0 -10"
-      dur="1.5s"
-      repeatCount="indefinite"
-      direction="alternate"/>
-  </text>
-
+  <!-- Cat PNG -->
+  <image x="730" y="60"
+         width="110" height="110"
+         xlink:href="cat.png"
+         class="float"/>
 </svg>
