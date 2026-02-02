@@ -17,7 +17,7 @@
 
       .typing2 {
         animation: typing2 3s steps(15, end) infinite;
-        animation-delay: 1.5s; /* Adjusted for smoother overlap */
+        animation-delay: 1.5s;
         white-space: nowrap;
         overflow: hidden;
       }
@@ -70,5 +70,5 @@
     width="130"
     height="130"
     class="float"
-    xlink:href="https://leviarista.github.io/github-profile-header-generator/images/decorations/headphones-cat-1.png" />
+    xlink:href="./cat.png" />
 </svg>
