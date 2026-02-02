@@ -2,7 +2,6 @@
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  <!-- Background -->
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#4b6cb7"/>
@@ -18,20 +17,20 @@
 
       .typing2 {
         animation: typing2 3s steps(15, end) infinite;
-        animation-delay: 3s;
+        animation-delay: 1.5s; /* Adjusted for smoother overlap */
         white-space: nowrap;
         overflow: hidden;
       }
 
       @keyframes typing {
-        0% { width: 0 }
-        40% { width: 520px }
+        0%, 10% { width: 0 }
+        40%, 90% { width: 520px }
         100% { width: 520px }
       }
 
       @keyframes typing2 {
-        0% { width: 0 }
-        40% { width: 200px }
+        0%, 10% { width: 0 }
+        40%, 90% { width: 200px }
         100% { width: 200px }
       }
 
@@ -49,27 +48,27 @@
 
   <rect width="900" height="220" rx="20" fill="url(#bg)" />
 
-  <!-- Name -->
   <foreignObject x="40" y="70" width="600" height="60">
     <div xmlns="http://www.w3.org/1999/xhtml"
-         style="color:white;font-size:36px;font-family:Poppins,Arial;"
+         style="color:white;font-size:36px;font-family:Poppins,Arial,sans-serif;font-weight:bold;"
          class="typing">
       Hey! I am Zulekha Aalmi
     </div>
   </foreignObject>
 
-  <!-- Role -->
   <foreignObject x="40" y="125" width="300" height="40">
     <div xmlns="http://www.w3.org/1999/xhtml"
-         style="color:#e0e7ff;font-size:20px;font-family:Poppins,Arial;"
+         style="color:#e0e7ff;font-size:22px;font-family:Poppins,Arial,sans-serif;"
          class="typing2">
       Web Developer
     </div>
   </foreignObject>
 
-  <!-- Cat PNG -->
-  <image x="730" y="60"
-         width="110" height="110"
-         xlink:href="cat.png"
-         class="float"/>
+  <image
+    x="725"
+    y="50"
+    width="130"
+    height="130"
+    class="float"
+    xlink:href="https://leviarista.github.io/github-profile-header-generator/images/decorations/headphones-cat-1.png" />
 </svg>
